@@ -1,0 +1,62 @@
+//Globals
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+};
+
+html {
+  font-size: 62.5%;
+};
+
+//Light Mode Colors
+$color-primary-light: #0079FF;
+$color-secondary-light: #697C9A;
+$color-tertiary-light: #4b6A9B;
+$color-catenary-light: #2B3442;
+
+//Dark Mode Colors
+$color-primary-dark: #0079FF;
+$color-secondary-dark: #FFFFFF;
+$color-tertiary-dark: #141D2f;
+$color-catenary-dark: #1E2A47;
+
+//Lightness Colors
+$lightness-primary: #F6F8FF;
+$lightness-secondary: #FEFEFE;
+
+
+//Typography
+body{
+  font-family: 'Space Mono', monospace;
+};
+
+.h1 {
+  font-size: 3.0rem;
+};
+
+.h2 {
+  font-size: 2.6rem;
+};
+
+.h3 {
+  font-size: 2.0rem;
+};
+
+.h4 {
+  font-size: 1.4rem;
+};
+
+.appDark {
+  background-color: $color-tertiary-dark;
+  height: 100%;
+  width: 100vw;
+}
+
+.appLight {
+  background-color: $lightness-primary;
+  height: 100%;
+  width: 100vw;
+}

@@ -1,0 +1,26 @@
+@import "../../App.scss";
+
+.buttonSwitch{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 2px;
+  border: 0;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+
+  & .appDark{
+    color: $lightness-primary;
+  }
+
+  & .appLight{
+    color: $color-tertiary-light;
+  }
+
+  & figure{
+    margin: 0;
+    padding-left: 15px;
+  };
+}

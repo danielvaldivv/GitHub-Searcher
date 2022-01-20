@@ -1,0 +1,72 @@
+@import "../../App.scss";
+
+.searcherDark{
+  background-color: $color-catenary-dark;
+
+  & .inputSearcher {
+    color: $lightness-primary;
+  }
+
+  & .inputSearcher {
+    &::placeholder{
+      color: $lightness-primary;
+    }
+  }
+}
+
+.searcherLight{
+  background-color: $lightness-secondary;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  & .inputSearcher {
+    color: $color-tertiary-light;
+  }
+
+  & .inputSearcher {
+    &::placeholder{
+      color: $color-tertiary-light;
+    }
+  }
+}
+.form {
+  max-width: 730px;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 69px;
+  border-radius: 15px;
+
+
+  & figure{
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+
+  & .inputSearcher{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-family: 'Space Mono', monospace;
+    font-size: 2.0rem;
+    background-color: transparent;
+    border-radius: 15px;
+    outline: none;
+  }
+
+  & .buttonSearch{
+    width: 100px;
+    height: 85%;
+    margin: 10px;
+    border: 0;
+    border-radius: 15px;
+    background-color: $color-primary-dark;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    color: $lightness-secondary;
+    font-weight: bold;
+
+  }
+}

@@ -1,0 +1,17 @@
+@import "../../App.scss";
+
+.header{
+  margin: 0 auto;
+  padding-top: 144px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 730px;
+
+  & h2{
+    margin: 0;
+
+   & .appDark{
+      color: $lightness-primary;
+    }
+  }
+}
