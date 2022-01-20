@@ -2,11 +2,41 @@
 
 .cardDark{
   background-color: $color-catenary-dark;
+  color: $lightness-primary;
+
+  & .name{
+    color: $lightness-primary;
+  }
+
+  & .description{
+    & .statistics{
+      background-color: $color-tertiary-dark;
+      & .statistics_label-value{
+        color: $lightness-primary;
+      }
+    }
+  }
 }
 
 .cardLight{
   background-color: $lightness-secondary;
+
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  color: $color-secondary-light;
+
+  & .name{
+    color: #333
+  }
+
+  & .description{
+    & .statistics{
+      background-color: $lightness-primary;
+
+      & .statistics_label-value{
+        color: #333;
+      }
+    }
+  }
 }
 
 .card{
@@ -14,4 +44,84 @@
   height: 444px;
   border-radius: 15px;
   margin: 20px auto 0;
+  padding: 55px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 8px;
+
+  & .avatar{
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+    margin-right: 25px;
+
+    & img{
+      border-radius: 50%;
+    }
+  }
+
+  & .name{
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+  }
+
+  & .date{
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  & .username{
+    grid-column: 2 / 6;
+    color: $color-primary-light
+  }
+
+  & .description{
+    grid-column: 2 / 6;
+
+    & .statistics{
+      display: flex;
+      max-width: 480px;
+      height: 85px;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 15px;
+      margin: 30px 0;
+    }
+
+    & .userLocation{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      & .userLocation_groupOne{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & span {
+          display:flex;
+          align-items: center;
+          gap: 10px;
+
+        }
+      }
+
+      & .userLocation_groupTwo{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        & span {
+          display:flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
 }

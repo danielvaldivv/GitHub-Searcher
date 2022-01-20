@@ -9,6 +9,8 @@
 
 html {
   font-size: 62.5%;
+  width: 100%;
+  height:100%;
 };
 
 //Light Mode Colors
@@ -26,7 +28,6 @@ $color-catenary-dark: #1E2A47;
 //Lightness Colors
 $lightness-primary: #F6F8FF;
 $lightness-secondary: #FEFEFE;
-
 
 //Typography
 body{
@@ -49,14 +50,16 @@ body{
   font-size: 1.4rem;
 };
 
-.appDark {
-  background-color: $color-tertiary-dark;
+.app{
   height: 100%;
   width: 100vw;
+  padding-bottom: 50px;
+}
+
+.appDark {
+  background-color: $color-tertiary-dark;
 }
 
 .appLight {
   background-color: $lightness-primary;
-  height: 100%;
-  width: 100vw;
 }

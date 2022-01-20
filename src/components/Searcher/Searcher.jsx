@@ -7,7 +7,11 @@ const ColorMode = (props) => {
 const { colorModeState } = props
 
   return (
-      <form className={`form ${colorModeState==='LIGHT' ?'searcherDark' :'searcherLight'}` } >
+      <form className={`form ${
+        colorModeState==='LIGHT'
+          ?'searcherDark'
+          :'searcherLight'
+        }` } >
         <figure>
           <img src={search} alt='Search'/>
         </figure>

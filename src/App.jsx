@@ -7,7 +7,7 @@ import { getGitHubUsers } from './services/getUsers'
 
 const App = () => {
   const [colorModeState, setColorModeState] = useState('LIGHT')
-  const [inputUser, setInputUser] = useState('octocat')
+  const [inputUser, setInputUser] = useState('danielvaldivv')
   const [userState, setUserState] = useState(inputUser)
 
   const gettingUsers = async (user) =>{
@@ -23,7 +23,7 @@ const App = () => {
 
 
   return (
-  <div className={colorModeState==='LIGHT' ?'appDark' :'appLight'}>
+  <div className={`app ${colorModeState==='LIGHT' ?'appDark' :'appLight'}`}>
     <Header colorModeState={colorModeState} setColorModeState={setColorModeState}/>
     <Searcher colorModeState={colorModeState} setInputUser={setInputUser} />
     <Card userState={userState} colorModeState={colorModeState}/>
