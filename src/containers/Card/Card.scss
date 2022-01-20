@@ -131,6 +131,8 @@
 @media (max-width: 700px) {
   .card{
   padding: 25px;
+  height: 600px;
+
 
     & .avatar{
       grid-column: 1 / 2;
@@ -155,12 +157,17 @@
     & .date{
       grid-column: 2 / 6;
       grid-row: 2 / 3;
-    justify-content: left;
+      justify-content: left;
     }
 
     & .description{
       grid-column: 1 / 6;
       grid-row: 4/11;
+
+      & .userLocation{
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }
