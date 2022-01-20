@@ -18,7 +18,7 @@ const Card = (props) => {
   return (
     <section className={`card ${colorModeState==='LIGHT' ?'cardDark' :'cardLight'}` } >
         <figure className='avatar'>
-          <img width="117px" src={avatar_url} alt={`Avatar ${name}`} />
+          <img src={avatar_url} alt={`Avatar ${name}`} />
         </figure>
         <h1 className={`name h1 ${colorModeState!=='LIGHT' ?'modeDark' :'modeLight'}`} >{name}</h1>
         <h4 className='date h4'>{created_at}</h4>

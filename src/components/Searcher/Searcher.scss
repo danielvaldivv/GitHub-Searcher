@@ -30,6 +30,7 @@
 }
 .form {
   max-width: 730px;
+  width: 90%;
   margin: 0 auto;
   margin-top: 25px;
   display: flex;
@@ -37,6 +38,7 @@
   align-items: center;
   height: 69px;
   border-radius: 15px;
+  position: relative;
 
 
   & figure{
@@ -69,5 +71,16 @@
     color: $lightness-secondary;
     font-weight: bold;
     cursor: pointer;
+  }
+
+  & .results{
+    display: none;
+    position: absolute;
+    right: 100px;
+    color: brown;
+  }
+
+  & .notFound{
+    display: block;
   }
 }

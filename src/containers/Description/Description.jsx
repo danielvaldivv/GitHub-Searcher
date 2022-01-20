@@ -48,7 +48,8 @@ const Description = (props) => {
               </span>
               <span>
                 <img src={website} alt="website"/>
-                <p className='h4'>{blog}</p>
+                {/* <a target="_blank" rel="noreferrer" href={item.url}></a> */}
+                <p className='h4'>{blog !== null ?<a target="_blank" rel="noreferrer" href={blog}>{blog}</a> : 'Not Available'}</p>
               </span>
             </section>
             <section className='userLocation_groupTwo'>

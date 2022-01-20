@@ -6,13 +6,29 @@ import Card from './containers/Card/Card'
 import { getGitHubUsers } from './services/getUsers'
 
 const App = () => {
-  const [colorModeState, setColorModeState] = useState('LIGHT')
-  const [inputUser, setInputUser] = useState('danielvaldivv')
-  const [userState, setUserState] = useState(inputUser)
+  const [colorModeState, setColorModeState] = useState('LIGHT');
+  const [inputUser, setInputUser] = useState('octocat');
+  const [userState, setUserState] = useState(inputUser);
+  const [notFound, setNotFound] = useState(false);
 
   const gettingUsers = async (user) =>{
-    const userResponse = await getGitHubUsers(user)
-    setUserState(userResponse)
+    const userResponse = await getGitHubUsers(user);
+
+    if (userState==='octocat'){
+      localStorage.setItem('octocat', userState);
+    }
+
+    if(userResponse.message==='Not Found') {
+      const { octocat } = localStorage;
+      setInputUser(octocat)
+      setNotFound(true)
+    } else {
+      setUserState(userResponse);
+    }
+
+    if(userResponse.message !== 'Not Found' && inputUser !== 'octocat'){
+      setNotFound(false)
+    }
   }
 
   useEffect(() => {
@@ -25,7 +41,7 @@ const App = () => {
   return (
   <div className={`app ${colorModeState==='LIGHT' ?'appDark' :'appLight'}`}>
     <Header colorModeState={colorModeState} setColorModeState={setColorModeState}/>
-    <Searcher colorModeState={colorModeState} setInputUser={setInputUser} />
+    <Searcher notFound={notFound} colorModeState={colorModeState} setInputUser={setInputUser} />
     <Card userState={userState} colorModeState={colorModeState}/>
   </div>
   )

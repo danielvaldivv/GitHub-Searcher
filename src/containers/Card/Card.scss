@@ -40,8 +40,9 @@
 }
 
 .card{
-  width: 730px;
-  height: 444px;
+  max-width: 730px;
+  width: 90%;
+  height: 500px;
   border-radius: 15px;
   margin: 20px auto 0;
   padding: 55px;
@@ -57,6 +58,7 @@
 
     & img{
       border-radius: 50%;
+      width:117px
     }
   }
 
@@ -122,6 +124,43 @@
           gap: 10px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .card{
+  padding: 25px;
+
+    & .avatar{
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+
+
+      & img{
+        width:70px
+      }
+    }
+    & .name{
+      grid-column: 2 / 6;
+      grid-row: 1 / 2;
+      display: flex;
+      align-items: center;
+      font-size: 2.6rem;
+    }
+
+    & .date{
+      grid-column: 2 / 6;
+      grid-row: 2 / 3;
+    justify-content: left;
+    }
+
+    & .description{
+      grid-column: 1 / 6;
+      grid-row: 4/11;
     }
   }
 }
